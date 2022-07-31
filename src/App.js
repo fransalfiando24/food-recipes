@@ -26,7 +26,9 @@ const Logo = styled(Link)`
   text-decoration: none;
   font-size: 1.5rem;
   font-weight: 400;
-  font-family: 'Lobster Two', cursive;
+  @media only screen and (max-width: 768px){
+    font-size: 1.1rem;
+  }
 `
 
 
@@ -38,8 +40,13 @@ const Nav = styled.div`
   justify-content: center;
   align-items: center;
   svg{
-    font-size:  2rem;
+    font-size: 2rem;
     margin: 0 1rem;
+  }
+  @media only screen and (max-width: 768px){
+    svg{
+      font-size: 1.5rem;
+    }
   }
 `
 

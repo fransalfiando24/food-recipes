@@ -28,8 +28,10 @@ function Recipe() {
                 <img src={detail.image} alt=""/>
             </div>
             <Info>
-                <Button className={activeTab === 'instructions' ? 'active' : ''} onClick={() => setActiveTab('instructions')}>Instructions</Button>
-                <Button className={activeTab === 'ingredients' ? 'active' : ''} onClick={() => setActiveTab('ingredients')}>Ingredients</Button>
+                <div className='btn'>
+                    <Button className={activeTab === 'instructions' ? 'active' : ''} onClick={() => setActiveTab('instructions')}>Instructions</Button>
+                    <Button className={activeTab === 'ingredients' ? 'active' : ''} onClick={() => setActiveTab('ingredients')}>Ingredients</Button>
+                </div>
                 {
                     activeTab === 'instructions' && (
                         <div>
@@ -55,7 +57,7 @@ function Recipe() {
 }
 
 const DetailWrapper = styled.div`
-    margin-top: 10rem;
+    margin-top: 5rem;
     margin-bottom: 5rem;
     display: flex;
     .active{
@@ -74,7 +76,18 @@ const DetailWrapper = styled.div`
     }
     img{
         width: 25rem;
+        border-radius: 1rem;
+        box-shadow: 3px 3px 20px rgba(0,0,0,.3);
     }
+    
+    @media only screen and (max-width: 768px){
+        flex-direction: column;
+        gap: 2rem;
+        img{
+            width: 20rem;
+        }
+    }
+
 `;
 
 const Button = styled.button`
@@ -84,11 +97,20 @@ const Button = styled.button`
     border: 2px solid black;
     margin-right: 1rem;
     font-weight: 600; 
+    cursor: pointer;
 `
 
 const Info = styled.div`
     width: 70%;
     margin-left: 3rem;
     font-size: 20px;
+    @media only screen and (max-width: 768px){
+        margin-left: 0;
+        width : 100%;
+        .btn{
+            display: flex;
+        }
+        m
+    }
 `
 export default Recipe

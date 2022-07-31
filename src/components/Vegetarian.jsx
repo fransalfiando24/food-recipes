@@ -37,7 +37,10 @@ function Vegetarian() {
                         arrows: false,
                         pagination: false,
                         drag: 'free',
-                        gap: '2rem'
+                        gap: '2rem',
+                        breakpoints: {
+                            800: { perPage: 2, pagination: true, gap: '1rem'},
+                        },
                     }}
                 >
                     {veggie.map((recipe) => {

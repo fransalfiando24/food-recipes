@@ -14,7 +14,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  margin: 0% 10%;
+  padding: 0 10%;
   background-color: #f3f3f3;
 }
 

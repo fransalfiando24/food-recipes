@@ -45,6 +45,7 @@ const Card = styled.div`
     img {
         width: 100%;
         border-radius: 2rem;
+        box-shadow: 3px 3px 20px rgba(0,0,0,.3);
     }
     a{
         text-decoration: none;
@@ -52,6 +53,10 @@ const Card = styled.div`
     h4{
         text-align: center;
         padding: 1rem;
+    }
+    transition: all .5s;
+    :hover{
+        transform: scale(1.02);
     }
 `
 
